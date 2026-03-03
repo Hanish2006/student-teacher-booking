@@ -1,47 +1,55 @@
-import { auth } from "./firebasetcher.js";
-import { 
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword 
+import { auth, db } from "./firebasetcher.js";
+
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-// REGISTER
+import {
+    collection,
+    addDoc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
 const registerBtn = document.getElementById("registerBtn");
 
 if (registerBtn) {
     registerBtn.addEventListener("click", function () {
+
         const email = document.getElementById("regEmail").value;
         const password = document.getElementById("regPassword").value;
 
         createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
                 alert("Registration Successful");
-                console.log("User Registered");
             })
             .catch(error => alert(error.message));
     });
 }
 
-// LOGIN
+
+
 const loginBtn = document.getElementById("loginBtn");
 
 if (loginBtn) {
     loginBtn.addEventListener("click", function () {
+
         const email = document.getElementById("loginEmail").value;
         const password = document.getElementById("loginPassword").value;
 
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
-                console.log("User Logged In");
+                alert("Login Successful");
                 window.location.href = "dashboardtcher.html";
             })
             .catch(error => alert(error.message));
     });
 }
-// 🔥 FIRESTORE IMPORTS
-import { db } from "./firebasetcher.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// 🔥 BOOK APPOINTMENT
+
+
 const bookBtn = document.getElementById("bookBtn");
 
 if (bookBtn) {
@@ -61,11 +69,25 @@ if (bookBtn) {
             });
 
             alert("Appointment Booked Successfully!");
-            console.log("Appointment Saved");
 
         } catch (error) {
-            console.error(error);
             alert("Error booking appointment");
+            console.error(error);
         }
+    });
+}
+
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+
+        signOut(auth)
+            .then(() => {
+                alert("Logged Out Successfully");
+                window.location.href = "indexteacher.html";
+            })
+            .catch(error => alert(error.message));
     });
 }
