@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="stylingtcher.css">
+</head>
+<body>
+
+<h2>Book Appointment</h2>
+
+<div class="box">
+    <input type="text" id="teacherName" placeholder="Teacher Name"><br><br>
+    <input type="date" id="date"><br><br>
+    <input type="time" id="time"><br><br>
+    <textarea id="message" placeholder="Purpose of appointment"></textarea><br><br>
+   <button id="bookBtn">Book</button>
+</div>
+
+<h3>Your Appointments</h3>
+<div id="appointmentList"></div>
+
+<button onclick="logout()">Logout</button>
+
+<script type="module" src="firebasetcher.js"></script>
+<script type="module" src="scriptfortcher.js"></script>
+
+</body>
+</html>
