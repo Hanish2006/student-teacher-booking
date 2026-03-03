@@ -78,18 +78,6 @@ git clone https://github.com/Hanish2006/student-teacher-booking.git
 
 ---
 
-## 📊 Database Structure (Firestore)
-
-Collection: `appointments`
-
-Fields:
-- teacher (string)
-- date (string)
-- time (string)
-- message (string)
-
----
-
 ## 🎯 Learning Outcomes
 
 - Understanding Firebase Authentication
@@ -97,12 +85,6 @@ Fields:
 - Handling ES6 Modules
 - Connecting Frontend with Cloud Database
 - Version control using Git & GitHub
-
----
-
-## 📸 Screenshots
-
-(Add your project screenshots here before submission)
 
 ---
 
