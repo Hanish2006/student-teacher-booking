@@ -6,20 +6,31 @@
 </head>
 <body>
 
-<h2>Book Appointment</h2>
+<div class="container">
 
-<div class="box">
-    <input type="text" id="teacherName" placeholder="Teacher Name"><br><br>
-    <input type="date" id="date"><br><br>
-    <input type="time" id="time"><br><br>
-    <textarea id="message" placeholder="Purpose of appointment"></textarea><br><br>
-   <button id="bookBtn">Book</button>
+    <h1>Dashboard</h1>
+
+    <div class="card">
+        <h2>Book Appointment</h2>
+
+        <input type="text" id="teacherName" placeholder="Teacher Name">
+        <input type="date" id="date">
+        <input type="time" id="time">
+        <textarea id="message" placeholder="Purpose of appointment"></textarea>
+
+        <button id="bookBtn">Book Appointment</button>
+    </div>
+
+    <div class="card">
+        <h2>Your Appointments</h2>
+        <div id="appointmentList">
+            <!-- Appointments will appear here -->
+        </div>
+    </div>
+
+    <button id="logoutBtn" class="logout">Logout</button>
+
 </div>
-
-<h3>Your Appointments</h3>
-<div id="appointmentList"></div>
-
-<button id="logoutBtn">Logout</button>
 
 <script type="module" src="firebasetcher.js"></script>
 <script type="module" src="scriptfortcher.js"></script>

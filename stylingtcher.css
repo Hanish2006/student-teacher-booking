@@ -1,33 +1,101 @@
+/* ===== BODY ===== */
 body {
-    font-family: Arial;
-    background-color: #6fc3f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 450px;
     text-align: center;
 }
 
-h1, h2 {
-    color: rgb(0, 0, 0);
+/* ===== MAIN HEADING ===== */
+h1 {
+    color: white;
+    margin-bottom: 25px;
 }
 
-.box {
-    background-color: white;
+/* ===== CARD STYLE ===== */
+.card {
+    background: white;
     padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    border: 1px solid gray;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-input, textarea {
-    width: 90%;
-    padding: 5px;
+/* ===== CARD HEADINGS ===== */
+.card h2 {
+    margin-bottom: 15px;
+    color: #333;
 }
 
+/* ===== INPUTS & TEXTAREA ===== */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* ===== INPUT FOCUS EFFECT ===== */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0984e3;
+    box-shadow: 0 0 5px rgba(9, 132, 227, 0.4);
+}
+
+/* ===== BUTTON STYLE ===== */
 button {
-    padding: 5px 10px;
-    background-color: lightblue;
-    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0984e3;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+/* ===== BUTTON HOVER ===== */
 button:hover {
-    background-color: skyblue;
+    background-color: #0652dd;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout {
+    background-color: #d63031;
+    margin-top: 10px;
+}
+
+.logout:hover {
+    background-color: #b71c1c;
+}
+
+/* ===== APPOINTMENT LIST ===== */
+#appointmentList {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ===== APPOINTMENT ITEM CARD ===== */
+.appointment-item {
+    background-color: #f1f2f6;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
 }
